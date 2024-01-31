@@ -1,9 +1,10 @@
 def find(target, i, j):
     count = 0
-    for i in range(i+1, r-1):
-        for j in range(j+1, c-1):
-            if array[i][j] != target:
+    for x in range(i+1, r-1):
+        for y in range(j+1, c-1):
+            if array[x][y] != target:
                 count += 1
+    # print(count)
     return count
 
 r, c = map(int, input().split())
