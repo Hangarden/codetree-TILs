@@ -2,7 +2,7 @@ N, S = map(int, input().split())
 
 lst = list(map(int, input().split()))
 
-sums = sum(lst)
+
 
 lst.sort()
 
@@ -27,6 +27,7 @@ def binary_search(target, lst):
 # print(binary_search(0, len(lst), find_value))
 
 for i in range(2):
+    sums = sum(lst)
     find_value = (sums - S)//(2-i)
     x = binary_search(find_value, lst)
     if x >= len(lst):
