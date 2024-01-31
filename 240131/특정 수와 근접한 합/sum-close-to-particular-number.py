@@ -26,8 +26,8 @@ def binary_search(target, lst):
 
 # print(binary_search(0, len(lst), find_value))
 
-for _ in range(2):
-    find_value = (sums - S)//2
+for i in range(2):
+    find_value = (sums - S)//(2-i)
     x = binary_search(find_value, lst)
     if x >= len(lst):
         x -=1
