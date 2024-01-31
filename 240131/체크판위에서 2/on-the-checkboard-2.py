@@ -20,9 +20,14 @@ S.append(array[0][0])
 start = array[0][0]
 
 sums = 0
+
+
 for i in range(1, r-1):
     for j in range(1, c-1):
         if array[i][j] != start:
             sums += find(array[i][j], i, j)
-
-print(sums)
+else:
+    if array[0][0] == array[r-1][c-1]:
+        print(0)
+    else:
+        print(sums)
