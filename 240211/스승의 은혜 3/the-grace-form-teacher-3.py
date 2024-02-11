@@ -1,31 +1,37 @@
-def max_gifts(N, B, gifts):
-    max_students = 0
-    
-    for i in range(N):
-        # Calculate total cost when using coupon for the ith gift
-        costs = [(p // 2 + s if i == j else p + s) for j, (p, s) in enumerate(gifts)]
-        # print(costs)
-        costs.sort()
-        # print()
-        # print(costs)
-
-        total_cost = 0
-        students = 0
-        
-        # Count how many students can receive gifts within the budget
-        for cost in costs:
-            if total_cost + cost <= B:
-                total_cost += cost
-                students += 1
-            else:
-                break
-                
-        max_students = max(max_students, students)
-        
-    return max_students 
+import sys
+input = sys.stdin.readline
 
 N, B = map(int, input().split())
-students = [list(map(int, input().split())) for _ in range(N)]
 
-# max_gifts(N,B,students)
-print(max_gifts(N,B,students))
+gifts = [list(map(int, input().split())) for _ in range(N)]
+
+# print(gifts)
+
+# 인덱스 별로 가격//2 를 하고 나서 가격을 구한 뒤 costs에 넣고 max를 구한다.
+
+# i이덱스를 제외하고는 그냥 a+b i인덱스라면 (a//2) + b)
+max_val = 0
+def max_gifts(N, B, gifts):
+    global max_val
+    for i in range(N):
+        costs = []
+        for j in range(N):
+            if i == j:
+                costs.append( (gifts[i][0] // 2) + gifts[i][1] )
+            else:
+                costs.append(gifts[i][0] + gifts[i][1])
+        costs.sort()
+        total = B
+        count = 0
+        for i in range(N):
+            if B - costs[i] >=0:
+                count += 1
+                B -= costs[i]
+            else:
+                break
+
+        max_val = max(max_val, count)
+
+    return max_val
+
+print(max_gifts(N, B, gifts))
