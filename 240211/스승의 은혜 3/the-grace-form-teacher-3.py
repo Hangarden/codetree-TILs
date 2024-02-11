@@ -17,9 +17,9 @@ def max_gifts(N, B, gifts):
         costs = []
         for j in range(N):
             if i == j:
-                costs.append( (gifts[i][0] // 2) + gifts[i][1] )
+                costs.append( (gifts[j][0] // 2) + gifts[j][1] )
             else:
-                costs.append(gifts[i][0] + gifts[i][1])
+                costs.append(gifts[j][0] + gifts[j][1])
         costs.sort()
         total = B
         count = 0
