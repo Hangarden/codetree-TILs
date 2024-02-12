@@ -17,6 +17,7 @@ for i in range(65, 65 + n):
                 order +=1
                 break
             else:
+                lst[order], lst[lst.index(j)] = lst[lst.index(j)], lst[order]
                 # print("modify")
                 count += 1
                 order +=1
