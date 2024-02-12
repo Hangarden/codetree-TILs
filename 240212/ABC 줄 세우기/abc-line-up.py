@@ -1,32 +1,18 @@
-n = int(input())
+def bubble_sort(arr):
+    n = len(arr)
+    swap = 0
 
-lst = list(input().split())
-
-# print(lst)
-
-array = []
-order = 0
-count = 0
-for i in range(65, 65 + n):
-    for j in lst:
-        if order == n-1:
-            break
-        if ord(j) == i:
-            if lst.index(j) == order:
-                # print("right")
-                order +=1
-                break
+    for i in range(n):
+       for j in range(n-1-i):
+            if arr[j] < arr[j+1]:
+                continue
             else:
-                lst[order], lst[lst.index(j)] = lst[lst.index(j)], lst[order]
-                # print("modify")
-                count += 1
-                order +=1
-                break
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swap += 1
 
+    return swap
 
-print(count)
-# array.sort()
-# new_array = []
-# for x in array:
-#     new_array.append(chr(x))
-# print(new_array)
+n = int(input())
+arr = list(input().split())
+
+print(bubble_sort(arr))
