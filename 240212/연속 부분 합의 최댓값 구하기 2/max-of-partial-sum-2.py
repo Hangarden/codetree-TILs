@@ -14,10 +14,11 @@ for number in numbers:
             max_val = max(max_val, current)
         current += number
 
-if current == max_val:
-    print(max_val)
-elif current < 0:
-    print(min(numbers))
+if max(numbers) < 0:
+    print(max(numbers))
 else:
-    print(current)
+    if current == max_val:
+        print(max_val)
+    else:
+        print(current)
 # print(max_val)
