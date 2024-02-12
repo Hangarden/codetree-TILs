@@ -10,7 +10,7 @@ for number in numbers:
         current = 0
         continue
     else:
-        if current > current + number:
+        if current >= current + number:
             max_val = max(max_val, current)
         current += number
 
