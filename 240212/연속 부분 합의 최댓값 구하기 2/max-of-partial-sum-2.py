@@ -16,6 +16,8 @@ for number in numbers:
 
 if current == max_val:
     print(max_val)
+elif current < 0:
+    print(min(numbers))
 else:
     print(current)
 # print(max_val)
