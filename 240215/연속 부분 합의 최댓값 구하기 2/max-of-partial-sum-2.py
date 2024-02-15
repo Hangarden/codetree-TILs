@@ -22,12 +22,12 @@ if max(numbers) < 0:
     print(max(numbers))
 else:
     for number in numbers:
-        # print(current)
+        max_val = max(current, max_val)
         if number >= 0:
             current += number
         else:
             if current <= -number:
-                max_val = max(current, max_val)
+                
                 current = 0
                 continue
             current += number
