@@ -1,17 +1,12 @@
 n = int(input())
 
-D = [-1] * (100001)
-D[2],D[4], D[5] = 1, 2, 1
+D = [999999999999] * (100001)
+D[0] = 0
 
 for i in range(2, n+1):
-    if D[i-2] != -1 or D[i-5] != -1:
-        if D[i-2] == -1:
-            D[i] = D[i-5] + 1
-            continue
-        elif D[i-5] == -1:
-            D[i] = D[i-2] + 1
-            continue
-        D[i] = min(D[i-2], D[i-5]) + 1
-    continue
+    if i < 5:
+        D[i] = min(D[i], D[i-2]) +  1
+    else:
+        D[i] = min(D[i], D[i-2], D[i-5]) + 1
 # print(D)
 print(D[n])
