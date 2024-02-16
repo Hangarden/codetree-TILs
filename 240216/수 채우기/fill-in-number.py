@@ -7,8 +7,11 @@ for i in range(2, n+1):
     if D[i-2] != -1 or D[i-5] != -1:
         if D[i-2] == -1:
             D[i] = D[i-5] + 1
+            continue
         elif D[i-5] == -1:
             D[i] = D[i-2] + 1
+            continue
+        D[i] = min(D[i-2], D[i-5]) + 1
     continue
 # print(D)
 print(D[n])
