@@ -21,7 +21,8 @@ def compare(x, y):
             return 1
         
         continue
-    
+    else:
+        return 0
 # arr = [41, 22, 85, 53, 9]
 n = int(input())
 arr = []
