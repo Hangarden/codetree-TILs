@@ -1,19 +1,15 @@
 n = int(input())
 
-count = 0
-while n > 1:
-    if n == 0:
-        break
-
-    if n >= 5:
-        count += (n // 5)
-        n %= 5
-    else:
-        count += (n//2)
-        n %= 2
+D = [-1] * (n+2)
+D[2],D[4], D[5] = 1, 2, 1
 
 
-if n== 0:
-    print(count)
-else:
-    print(-1)
+for i in range(6, n+1):
+    if D[i-2] != -1 or D[i-5] != -1:
+        if D[i-2] == -1:
+            D[i] = D[i-5] + 1
+        elif D[i-5] == -1:
+            D[i] = D[i-2] + 1
+    continue
+# print(D)
+print(D[n])
