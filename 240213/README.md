@@ -12,7 +12,7 @@
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
-|[LG / Ad-Hoc / Greedy Algorithm](https://www.codetree.ai/missions?missionId=19)|[[개념]연속 부분 합의 최댓값 구하기 2](https://www.codetree.ai/missions/19/problems/max-of-partial-sum-2)|![쉬움][easy]|![Failed][failed]|[링크](https://github.com/Hangarden/codetree-TILs/blob/main/240213/%EC%97%B0%EC%86%8D%20%EB%B6%80%EB%B6%84%20%ED%95%A9%EC%9D%98%20%EC%B5%9C%EB%8C%93%EA%B0%92%20%EA%B5%AC%ED%95%98%EA%B8%B0%202/max-of-partial-sum-2.py)|
+|[LG / Ad-Hoc / Greedy Algorithm](https://www.codetree.ai/missions?missionId=19)|[[개념]연속 부분 합의 최댓값 구하기 2](https://www.codetree.ai/missions/19/problems/max-of-partial-sum-2)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/Hangarden/codetree-TILs/blob/main/240213/%EC%97%B0%EC%86%8D%20%EB%B6%80%EB%B6%84%20%ED%95%A9%EC%9D%98%20%EC%B5%9C%EB%8C%93%EA%B0%92%20%EA%B5%AC%ED%95%98%EA%B8%B0%202/max-of-partial-sum-2.py)|
 
 
 * 획득 경험치: 해설을 보지 않고 푼 문제에 한해 최초 1회 경험치를 획득하실 수 있습니다.
