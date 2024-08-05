@@ -2,7 +2,7 @@ from collections import deque
 string = input()
 # print(string.count(string[0]), string[0])
 if string.count(string[0]) == len(string):
-    answer = string[0]+str(len(string[0]))
+    answer = string[0]+str(len(string))
 else:
     # print(string)
     lst = list(string)
