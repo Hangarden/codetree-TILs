@@ -1,5 +1,6 @@
 from collections import deque
 string = input()
+# print(string.count(string[0]), string[0])
 if string.count(string[0]) == len(string):
     answer = string[0]+str(len(string[0]))
 else:
@@ -33,4 +34,4 @@ else:
 
     answer += initial + str(count)
 
-    print(len(answer))
+print(len(answer))
