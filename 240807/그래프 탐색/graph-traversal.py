@@ -19,9 +19,9 @@ def dfs(i):
     global count
     visited[i] = True
     count +=1
-    for i in graph[1]:
-        if not visited[i]:
-            dfs(i)
+    for x in graph[i]:
+        if not visited[x]:
+            dfs(x)
 
 dfs(1)
 
