@@ -25,13 +25,18 @@ def explode_and_apply_gravity(grid, n, x, y):
     
     # 중력 작용
     for col in range(n):
-        empty_row = n - 1
-        for row in range(n - 1, -1, -1):
+        # 각 열마다 0이 아닌 숫자를 아래로 내리기 위한 스택을 사용
+        stack = []
+        for row in range(n):
             if new_grid[row][col] != 0:
-                new_grid[empty_row][col] = new_grid[row][col]
-                if empty_row != row:
-                    new_grid[row][col] = 0
-                empty_row -= 1
+                stack.append(new_grid[row][col])
+        
+        # 맨 아래부터 다시 숫자를 채워 넣기
+        for row in range(n - 1, -1, -1):
+            if stack:
+                new_grid[row][col] = stack.pop()
+            else:
+                new_grid[row][col] = 0
     
     return new_grid
 
@@ -39,9 +44,11 @@ def count_pairs(grid, n):
     count = 0
     for i in range(n):
         for j in range(n):
-            if i + 1 < n and grid[i][j] == grid[i + 1][j]:
-                count += 1
+            # 오른쪽 확인
             if j + 1 < n and grid[i][j] == grid[i][j + 1]:
+                count += 1
+            # 아래쪽 확인
+            if i + 1 < n and grid[i][j] == grid[i + 1][j]:
                 count += 1
     return count
 
