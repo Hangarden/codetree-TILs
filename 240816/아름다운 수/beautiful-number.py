@@ -3,10 +3,12 @@ beautiful = ['1', '22', '333', '4444']
 count = 0
 
 n = int(input())
-for i in product(beautiful, repeat=n):
-    x = "".join(i)
-    if len(x) > n:
-        continue
-    else:
-        count += 1
+
+for k in range(n+1):
+    for i in product(beautiful, repeat=k):
+        # print(i)
+        x = "".join(i)
+        # print(x)
+        if len(x) == n:
+            count += 1
 print(count)
