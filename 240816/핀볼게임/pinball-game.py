@@ -48,7 +48,7 @@ n = int(input())
 maps = [list(map(int, input().split())) for _ in range(n)]
 
 nums1 = [0, n-1]
-max_val = -888
+max_val = 1
 
 for i in nums1:  # 상단과 하단
     for j in nums1:  # 좌측과 우측
